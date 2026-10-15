@@ -15,7 +15,7 @@ def run():
 
 Thread(target=run).start()
 
-from aidm.discord_bot import run_dm_bot
+from aidm.discord_bot import run_dm_bot, DEFAULT_PROMPT_PATH
 
 if __name__ == "__main__":
-    run_dm_bot()
+    run_dm_bot(system_prompt_path=DEFAULT_PROMPT_PATH)
