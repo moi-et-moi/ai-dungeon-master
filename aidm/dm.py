@@ -5,7 +5,7 @@ from pathlib import Path
 from llama_index.core import ChatPromptTemplate
 from llama_index.core.base.llms.types import TextBlock
 from llama_index.core.llms import ChatMessage, MessageRole
-from llama_index.llms.openai import Gemini
+from llama_index.llms.gemini import Gemini
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 
