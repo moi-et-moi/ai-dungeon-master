@@ -30,7 +30,7 @@ def initialize_ai_dungeon_master(
 
 
 async def handle_message(message: discord.Message) -> None:
-    if message.author == client.user or message.channel.name != "aidm":
+    if message.author == client.user:
         return
 
     if message.content == "#save":
