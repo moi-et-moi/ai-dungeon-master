@@ -5,7 +5,7 @@ from pathlib import Path
 from llama_index.core import ChatPromptTemplate
 from llama_index.core.base.llms.types import TextBlock
 from llama_index.core.llms import ChatMessage, MessageRole
-from llama_index.llms.openai import OpenAI
+from llama_index.llms.openai import Gemini
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 
@@ -15,7 +15,7 @@ class AIDungeonMaster:
     """
 
     def __init__(self, system_prompt: Path | None = None, chat_history: ChatPromptTemplate | None = None):
-        self.llm_client = OpenAI()
+        self.llm_client = Gemini()
 
         self.user_message_template = ChatMessage("```{user_message}```", role=MessageRole.USER)
 
