@@ -71,5 +71,5 @@ def run_dm_bot(system_prompt_path: Path, history_path: Optional[Path] = None) ->
     discord_thread.start()
 
     # Démarrage de Flask sur le port 8080 exigé par Render
-    port = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
